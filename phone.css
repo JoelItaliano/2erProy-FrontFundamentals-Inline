@@ -1,0 +1,12 @@
+
+.buscador .search{
+    display: none;
+}
+
+
+#lupa_phone{
+    display: inline;
+    position: absolute;
+    right:20%;
+    bottom: 30%;
+}

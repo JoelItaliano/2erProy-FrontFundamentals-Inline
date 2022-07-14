@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="(max-width: 512px)" href="./phone.css">
+    <link rel="stylesheet" media="(max-width: 900px)" href="./tablet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Signika&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <main>
+        <header>
+         <div class="img">  
+          <img src="img/logoyoutube.png" alt="Logo youtube" loading="lazy">  
+        </div> 
+
+        <div class="buscador">             
+
+            <div class="search" id="conteiner_barra_busqueda">
+                <div class="search_visible" id="container">
+                <span class="material-symbols-outlined" id="lupa_oculta">search</span>
+                <input type="search" class="search_visible" id="search" placeholder="Buscar"/>
+                </div>
+                <span class="material-symbols-outlined" id="lupa">search</span>                
+            </div> 
+            
+            <div class="micro">
+                <span class="material-symbols-outlined" id="micro">
+                    mic
+                </span>
+            </div>            
+        </div>
+
+        <div class="funciones">           
+            <div>
+              <span class="material-symbols-outlined">
+                video_call
+              </span>
+            </div>
+            <div>
+              <span class="material-symbols-outlined">
+                apps
+              </span>
+            </div> 
+            <div> 
+            <span class="material-symbols-outlined">
+                notifications
+            </span>
+            </div>            
+            <div class="user">
+                <h3>J</h3>
+            </div>
+        </div>
+        <span class="material-symbols-outlined" id="lupa_phone">search</span> 
+        </header>
+
+       
+        <section class="nav_lateral">
+            <nav>
+              <div class="menu_nav" id="ico_menu_lat">
+                <div class="cont_menu">
+                  <span class="material-symbols-outlined">menu</span>
+                </div>
+              </div>
+
+            <section class="nav_icon_hidden" id="nav_oculto">
+
+              <div class="home">
+                <span class="material-symbols-outlined">home</span>
+                <p>Inicio</p>
+              </div>
+
+              <div class="explorar">
+                <span class="material-symbols-outlined">explore</span>
+                <p>Explorar</p>
+              </div>
+
+              <div class="shorts">
+                <span class="ico_img" ><img src="img/SHORT.png" id="img_short"></span>
+                <p>Shorts</p>
+              </div>
+
+              <div class="suscripciones">
+                <span class="material-symbols-outlined">subscriptions</span>
+                <p>Suscripciones</p>
+              </div>
+
+              <div clas="biblioteca">
+                <span class="material-symbols-outlined">video_library</span>
+                <p>Biblioteca</p>
+              </div>
+
+            </section>
+
+            <section class="nav_icon_expand" id="nav_show">
+
+              <article class="nav_icon_expand_primer_secc">
+                <ul>
+                  <li><span class="material-symbols-outlined" id="ico_home">home</span><a href="">Inicio</a></li>
+                  <li><span class="material-symbols-outlined" id="ico_expl">explore</span><a href="">Explorar</a></li>
+                  <li><span class="ico_img" ><img src="img/SHORT.png" id="img_short"></span><a href="">Shorts</a></p></li>
+                  <li><span class="material-symbols-outlined" id="ico_susbc">subscriptions</span><a href="">Suscripciones</a></li>
+                </ul>
+              </article>
+              <hr>
+              <article class="nav_icon_expand_seg_secc">
+                <ul>
+                  <li><span class="material-symbols-outlined" id="ico_biblioteca">video_library</span><a href="">Biblioteca</a></li>
+                  <li><span class="material-symbols-outlined">history</span><a href="">Historial</a></li>
+                  <li><span class="material-symbols-outlined">smart_display</span><a href="">Mis vídeos</a></li>
+                  <li><span class="material-symbols-outlined">schedule</span><a href="">Ver más tarde</a></li>
+                  <li><span class="material-symbols-outlined">thumb_up</span><a href="">Vídeos que me gustan</a></li>
+                  <li id="nav_icon_seg_secc_mostrar_secc_oculta" onclick=mostrarSecOcultaNav()><span class="material-symbols-outlined">keyboard_arrow_down</span><a onclick=mostrarSecOcultaNav()>Mostrar más</a></li>
+                </ul>
+                <article class="nav_icon_expand_seg_secc_oculto" id="nav_icon_expand_seg_secc_oculto">
+                  <ul>
+                  <li><span class="material-symbols-outlined">playlist_play</span><a>Pagina 1</a></li>
+                  <li><span class="material-symbols-outlined">playlist_play</span><a>Pagina 2</a></li>
+                  <li><span class="material-symbols-outlined">playlist_play</span><a>Pagina 3</a></li>
+                  <li><span class="material-symbols-outlined">playlist_play</span><a>Pagina 4</a></li>
+                  <li><span class="material-symbols-outlined">playlist_play</span><a>Pagina 5</a></li>
+                  <li><span class="material-symbols-outlined" onclick=ocultarSeccNav()>expand_less</span><a onclick=ocultarSeccNav()>Mostrar Menos</a></li>
+                    </ul>
+                </article>
+              </article>
+              <hr>
+              <article class="nav_icon_expand_terc_secc">
+                <h2>SUSCRIPCIONES</h2>
+                <ul>
+                  <li><div class="suscrip"></div><a href="">Suscripcion 1</a></li>
+                  <li><div class="suscrip"></div><a href="">Suscripcion 2</a></li>
+                  <li><div class="suscrip"></div><a href="">Suscripcion 3</a></li>
+                  <li><div class="suscrip"></div><a href="">Suscripcion 4</a></li>
+                  <li><div class="suscrip"></div><a href="">Suscripcion 5</a></li>
+                  <li><div class="suscrip"></div><a href="">Suscripcion 6</a></li>
+                  <li><div class="suscrip"></div><a href="">Suscripcion 7</a></li>
+                </ul>
+              </article>
+              <hr>
+              <article class="nav_icon_expand_cuart_secc">
+                <h2>MÁS DE YOUTUBE</h2>
+                <ul>
+                  <li><span class="material-symbols-outlined">smart_display</span><a href="">YouTube Premium</a></li>
+                  <li><span class="ico_img"><img src="img/ico-peli.png" id="img_peli"></span> <a href="">Películas</a></li>
+                  <li><span class="ico_img"><img src="img/ico-gamePad.png" id="img_game"></span> <a href="">Videojuegos</a></li>
+                  <li><span class="material-symbols-outlined">sensors</span><a href="">Directo</a></li>
+                  <li><span class="material-symbols-outlined">lightbulb</span><a href="">Aprendizaje</a></li>
+                  <li><span class="ico_img"><img src="img/copa.png" id="img_copa"></span> <a href="">Deportes</a></li>
+                </ul>
+              </article>
+              <hr>
+              <article class="nav_icon_expand_quinta_secc">
+                <ul>
+                <li><span class="material-symbols-outlined">settings</span><a href="">Configuración</a></li>
+                <li><span class="material-symbols-outlined">flag</span><a href="">Historial de denuncias</a></li>
+                <li><span class="material-symbols-outlined">help</span><a href="">Ayuda</a></li>
+                <li><span class="ico_img"><img src="img/ADVERTENCIA.png" id="img_sugerencia"></span><a href="">Enviar sugerencias</a></li>
+                </ul>
+              </article>
+              <hr>
+              <article class="art_footer">
+                <footer>        
+                <p>Información Prensa Derechos de autor Contactar Creadores Publicidad Desarrolladores</p><br>
+                <p>Términos Privacidad Política y seguridad Cómo funciona YouTube Probar funciones nuevas</p><br>
+                <p class="derech_autor">&copy 2022 Google LLC</p> 
+              </footer>                   
+            </article>
+            </section>
+
+            </nav>            
+        </section>
+        
+        <section class="selecciones" id="selecciones">
+          
+          <article class="opciones">Todo</article>
+          <article class="opciones">EnDirecto</article>
+          <article class="opciones">Comedia</article>
+          <article class="opciones">Videojuegos</article>
+          <article class="opciones">JavaScript</article>
+          <article class="opciones">Música</article>
+          <article class="opciones">Bitcoin</article>
+          <article class="opciones">Pódcast</article>
+          <article class="opciones">Entrevistas periodísticas</article>
+          <article class="opciones">Debates</article>
+          <article class="opciones">Pop latino</article>
+          <article class="opciones">Hardware informático</article>
+          <article class="opciones">El Rubius</article>
+          <article class="opciones">Deep house</article>
+          <article class="opciones">Asignaturas</article>
+          <span class="material-symbols-outlined">arrow_forward_ios</span>
+        </section>
+        
+        <section class="secc_vid" id="secc_vid">
+         <section class="conten_vid" id="conten_vid"> 
+
+         <article class="video">
+          <div >            
+            <iframe src="https://www.youtube.com/embed/C1o6agYXlxo?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>MILEI DESCHAVÓ UNA CORRUPCIÓN DE CRISTINA</h4>
+              <p>El Peluca Milei</p>
+              <p>35.435 visualizaciones26 jun 2022</p>
+            </div>
+          </div>
+
+         </article>
+         
+         <article class="video">
+          <div>
+            <iframe src="https://www.youtube.com/embed/Rp-WQIHMXQs?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>DUELO DE SHIPPEOS: ¿NACHOTA O OCCHIAMIN?</h4>
+              <p>LUZU TV</p>
+              <p>262.371 visualizaciones</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+
+          <div>
+            <iframe src="https://www.youtube.com/embed/j2HXmH87YZU?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>¿SUBIRAN LAS #ACCIONES? ¿SUBIRA #BITCOIN?</h4>
+              <p>Daniel Muvdi - Bitcoin y Criptomonedas</p>
+              <p>20.300 visualizaciones</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+
+          <div>
+            <iframe src="https://www.youtube.com/embed/wEbFlxufiE0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>EL ICEBERG DE SKYRIM | COMPLETO</h4>
+              <p>El Gerber</p>
+              <p>511.367</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+
+          <div>
+            <iframe src="https://www.youtube.com/embed/utDXwC59YZ8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>3 Acciones, oportunidades </h4>
+              <p>Inversiones Familiares</p>
+              <p>4830 suscriptores</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+
+          <div>
+            <iframe src="https://www.youtube.com/embed/_SSMIqFoiS4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>MÍSTER JÄGGER VS VIRUZZ | LA VELADA DEL AÑO</h4>
+              <p>Ibai</p>
+              <p>7.673.771 visualizaciones</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+         
+          <div>
+            <iframe src="https://www.youtube.com/embed/nEnKD7jkjlE?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>PEDIR PERDÓN, LOS MEJORES LYP SYNC DE OYENTES</h4>
+              <p>LUZU TV</p>
+              <p>18.496 visualizaciones</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/SEyIWstBHVk?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>LITERALMENTE TE VOY A CAMBIAR LA VIDA</h4>
+              <p>Soy Dalto</p>
+              <p>468.000 suscriptores</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/nv5-Zd4kL7I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>Ep. 131: Construyendo Identidad</h4>
+              <p>Individuo Digital</p>
+              <p>152 visualizaciones</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/nqxe8oxx_kc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>Vamos gran hermano!!!</h4>
+              <p>Gerardo Escobar Diseños</p>
+              <p>76 visualizaciones27 jun 2022</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/ZugN2YmyE-0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>FUTBOL 5: POLICIAS VS LADRONES</h4>
+              <p>FFran Gomez</p>
+              <p>170.437</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/yfnJVzbKKIM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>CÓMO PREPARARSE para DESPIDOS complicados</h4>
+              <p>Pelado Nerd</p>
+              <p>7627</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/LIFZf_7gtxY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>          </div>
+          </div>  
+
+           <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>Peak Guilty Gear Strive Modding</h4>
+              <p>Jonny The Channel</p>
+              <p>395.860 visualizaciones5 jul 2021</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/e9lmNFH2P0w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>Hackearon 700 SITIOS WEB en 1 MINUTO | Historia de World of Hell</h4>
+              <p>Facundo García Martoni</p>
+              <p>1104</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/gGg8Lx4jcFg?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>#ParenLaMano Completo - 30/05 | Vorterix</h4>
+              <p>Vorterix</p>
+              <p>250.337 visualizaciones</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/lqFaPj6BYi4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>Como Convertir de Texto a Binario y Viceversa.</h4>
+              <p>Eliezer De León</p>
+              <p>836.402 visualizaciones</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/qZL8edNpw5w?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>ASÍ ES UN HACKER DE VERDAD - Entrevista con S4vitar</h4>
+              <p>midudev</p>
+              <p>49.276</p>
+            </div>
+          </div>
+         </article>
+         
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/VupspyQYYdY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>Este hotel está construido sobre ÁRBOLES | Tree Lodge Amazonas</h4>
+              <p>Luisito Comunica</p>
+              <p>1.336.791 visualizaciones</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/dXEBmt0d71U?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>MEJORES TENTADAS DE YAYO 3 | COMPILADO</h4>
+              <p>TOP ARGENTO</p>
+              <p>1.053.168 visualizaciones</p>
+            </div>
+          </div>
+         </article>
+
+         <article class="video">
+          
+          <div>
+            <iframe src="https://www.youtube.com/embed/-yI9t47_PzI?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          
+          <div class="descrip_video">
+            <div class="logo_video">
+              <div class="logo"></div>
+            </div>
+
+            <div class="titulo_video">
+              <h4>Aprende rápido y recuerda TODO</h4>
+              <p>HolaMundo</p>
+              <p>173.2172</p>
+            </div>
+          </div>
+         </article>
+
+        </section> 
+        </section>
+       
+    </main>
+   <script src="index.js"></script>
+</body>
+</html>

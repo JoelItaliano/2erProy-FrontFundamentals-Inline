@@ -1,0 +1,78 @@
+/*encabezado*/
+header{
+    width: 100% ;
+    height: 60px;
+
+}
+
+.search{
+    width: 100%;
+}
+
+.micro{
+    display: none;
+}
+
+.funciones .material-symbols-outlined{
+    display: none;
+}
+
+.funciones .user {
+    position: absolute
+}
+
+
+/* barra lateral*/
+.nav_lateral {
+    width: 100%;
+    height: 60px;
+
+    position: fixed;
+    bottom: 0;
+}
+
+.menu_nav, .nav_icon_expand {
+    display: none !important;
+}
+
+.nav_icon_hidden {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-evenly;
+}
+
+.nav_icon_hidden div{
+    padding: 10px 0;
+}
+
+.explorar {
+    display: none !important;
+}
+
+/*selecciones debajo de header*/
+.selecciones {
+    width: 100%;
+
+    top: 60px;
+
+    justify-content: start;
+   
+}
+
+/*Seccion de videos*/
+
+.secc_vid{
+    width: 100%;
+}
+
+.secc_vid .conten_vid{
+    padding: 30px 0;
+}
+
+.conten_vid article {
+    height: 250px;
+}
+
+.descrip_video .logo_video {
+    padding-left: 10px;
+}
